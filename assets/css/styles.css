@@ -495,6 +495,22 @@ body:not(:hover) .cursor, body:not(:hover) .cursor-follower { opacity: 0; }
 }
 .proj-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
 .proj-card:hover .proj-card__img img { transform: scale(1.04); }
+
+/* GIF display fix */
+.proj-card.featured .proj-card__img {
+    min-height: auto;
+    min-width: auto;
+    overflow: hidden;
+}
+
+.proj-card.featured .proj-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center top;
+    background: #0d1120;
+}
+
 .proj-card__img.no-img {
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--surface), var(--bg-3));
